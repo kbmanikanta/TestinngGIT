@@ -19,6 +19,7 @@ namespace DocuTrackerAutomation
 
         public static void close()
         {
+            //hiii
             // Instance.Close();
         }
         public static void Refresh()
