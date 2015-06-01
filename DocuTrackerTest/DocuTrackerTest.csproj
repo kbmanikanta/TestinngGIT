@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{11936732-8F31-4508-8644-3D77B4C2AA9A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DocuTrackerTest</RootNamespace>
+    <AssemblyName>DocuTrackerTest</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <Choose>
+    <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+      </ItemGroup>
+    </When>
+    <Otherwise>
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+  <ItemGroup>
+    <Compile Include="AccountSettingsPage\Account_Settings_Profile.cs" />
+    <Compile Include="AccountSettingsPage\User_Management_ChangePassword.cs" />
+    <Compile Include="AgreementSettingsPage\Agreement_Settings_CreatePBEntity.cs" />
+    <Compile Include="AgreementSettingsPage\Agreement_Settings_ISDAAffiliate.cs" />
+    <Compile Include="AgreementSettingsPage\Agreement_Settings_CounterpartiesList.cs" />
+    <Compile Include="AgreementSettingsPage\Agreement_Settings_CreateCounterparty.cs" />
+    <Compile Include="AgreementSettingsPage\Agreement_Settings_ISDAAffiliateEntities.cs" />
+    <Compile Include="AgreementSettingsPage\Agreement_Settings_ISDADocumentTypesforUploading.cs" />
+    <Compile Include="AgreementSettingsPage\Agreement_Settings_PBCounterpartiesList.cs" />
+    <Compile Include="AgreementSettingsPage\Agreement_Settings_PBDocumentTypesforUploading.cs" />
+    <Compile Include="AgreementSettingsPage\Agreement_Settings_ReopenApprovedISDA.cs" />
+    <Compile Include="AgreementSettingsPage\Agreement_Settings_ReopenApprovedPB.cs" />
+    <Compile Include="AgreementSettingsPage\Agreement_Settings_UnlockISDAAgreements.cs" />
+    <Compile Include="AgreementSettingsPage\Agrement_Settings_UnlockPBAgreements.cs" />
+    <Compile Include="ArchivendDelete\ArchivendDelete_ClientArchive.cs" />
+    <Compile Include="ArchivendDelete\ArchivendDelete_ClientEntityArchive.cs" />
+    <Compile Include="ArchivendDelete\ArchivendDelete_ClientEntityUnarchive.cs" />
+    <Compile Include="ArchivendDelete\ArchivendDelete_ClientUnarchive.cs" />
+    <Compile Include="ArchivendDelete\ArchivendDelete_ISDAArchive.cs" />
+    <Compile Include="ArchivendDelete\ArchivendDelete_ISDANegotiationDraftArchive.cs" />
+    <Compile Include="ArchivendDelete\Archivenddelete_ISDANegotiationDraftUnarchive.cs" />
+    <Compile Include="ArchivendDelete\ArchivendDelete_ISDAUnarchive.cs" />
+    <Compile Include="ArchivendDelete\ArchivendDelete_PbArchive.cs" />
+    <Compile Include="ArchivendDelete\ArchivendDelete_PBNegotiationDraftArchive.cs" />
+    <Compile Include="ArchivendDelete\ArchivendDelete_PBNegotiationDraftUnarchive.cs" />
+    <Compile Include="ArchivendDelete\ArchivendDelete_PBUnarchive.cs" />
+    <Compile Include="AuditLogsPage\AuditLogs_AmendedPBAgreements.cs" />
+    <Compile Include="AuditLogsPage\AuditLogs_AmmendedISDAAgreements.cs" />
+    <Compile Include="AuditLogsPage\AuditLogs_ViewAuditLogs.cs" />
+    <Compile Include="AuditLogsPage\AuditLogs_ViewExceptions.cs" />
+    <Compile Include="AuditLogsPage\AuditLogs_ViewGeneralLogs.cs" />
+    <Compile Include="Client Tests\ManageAgreementPages\ManageAgreements_CreateNewISDAAgreement.cs" />
+    <Compile Include="Client Tests\ManageAgreementPages\ManageAgreements_CreateNewISDANegotiationDraft.cs" />
+    <Compile Include="Client Tests\ManageAgreementPages\ManageAgreements_CreateNewPBNegotiationDraft.cs" />
+    <Compile Include="Client Tests\ManageAgreementPages\ManageAgreements_ISDATrackingWorkflow.cs" />
+    <Compile Include="Client Tests\ManageAgreementPages\ManageAgreement_CreateNewPBAgreement.cs" />
+    <Compile Include="Client Tests\SearchPages\Search_Agreements_Executed_Client.cs" />
+    <Compile Include="Client Tests\SearchPages\Search_Agreements_NegotiationDrafts_Client.cs" />
+    <Compile Include="VipClient\Clients_VIPAccess.cs" />
+    <Compile Include="ManageAgreementsPage\Manage_Agreements_BenchmarkPBTerms.cs" />
+    <Compile Include="ManageAgreementsPage\Manage_Agreements_CopyTemplatetoTemplate.cs" />
+    <Compile Include="ManageAgreementsPage\Manage_Agreements_CreateNewISDANegotiationDrafts.cs" />
+    <Compile Include="ManageAgreementsPage\Manage_Agreements_CreateNewPBAgreement.cs" />
+    <Compile Include="ManageAgreementsPage\Manage_Agreements_CreateNewPBNegotiationDraft.cs" />
+    <Compile Include="ManageAgreementsPage\Manage_Agreements_ISDAAgreementTrackingWorkflow.cs" />
+    <Compile Include="ManageAgreementsPage\Manage_Agreements_BenchmarkISDATerms.cs" />
+    <Compile Include="ManageAgreementsPage\Manage_Agreements_CreateNewISDA.cs" />
+    <Compile Include="ManageAgreementsPage\Manage_Agreements_ISDAApprovedTrackingWorkflow.cs" />
+    <Compile Include="ManageAgreementsPage\Manage_Agreements_ISDANegotiationDraftWorkflow.cs" />
+    <Compile Include="ManageAgreementsPage\Manage_Agreements_PBAgreementTrackingWorkflow.cs" />
+    <Compile Include="ManageAgreementsPage\Manage_Agreements_PBApprovedTrackingWorkflow.cs" />
+    <Compile Include="ManageAgreementsPage\Manage_Agreements_PBNegotiationDraftWorkflow.cs" />
+    <Compile Include="ManageAgreementsPage\Manage_Agreements_TemplateAgreementTerms.cs" />
+    <Compile Include="ManageAgreementsPage\Manage_Agreements_UploadISDAAgreements.cs" />
+    <Compile Include="ManageAgreementsPage\Manage_Agreements_UploadPBAgreements.cs" />
+    <Compile Include="ReportsPage\Reports_GenerateReport.cs" />
+    <Compile Include="ReportsPage\Reports_ISDAReports.cs" />
+    <Compile Include="ReportsPage\Reports_PBReports.cs" />
+    <Compile Include="ReportsPage\Reports_PBReports_16-30.cs" />
+    <Compile Include="ReportsPage\Reports_PBReports_31_65.cs" />
+    <Compile Include="ReportsPage\Reports_SavedReports.cs" />
+    <Compile Include="SearchAgreements\Search_Agreements_Executed.cs" />
+    <Compile Include="SearchAgreements\Search_Agreements_NegotiationDrafts.cs" />
+    <Compile Include="UserManagementPage\User_Management_ClientLoginList.cs" />
+    <Compile Include="UserManagementPage\User_Management_DemoClientLoginList.cs" />
+    <Compile Include="UserManagementPage\User_Management_EmployeeList.cs" />
+    <Compile Include="UserManagementPage\User_Management_MasterAdminList.cs" />
+    <Compile Include="UserManagementPage\User_Management_RegisterClientLogin.cs" />
+    <Compile Include="UserManagementPage\User_Management_RegisterDemoClientLogin.cs" />
+    <Compile Include="UserManagementPage\User_Management_RegisterEmployee.cs" />
+    <Compile Include="UserManagementPage\User_Management_RegisterMasterAdmin.cs" />
+    <Compile Include="UserManagementPage\User_Management_RegisterSubadmin.cs" />
+    <Compile Include="UserManagementPage\User_Management_SubadminList.cs" />
+    <Compile Include="UserManagementPage\User_Management_VIPAccess.cs" />
+    <Compile Include="Utilities\ClientLogin.cs" />
+    <Compile Include="Utilities\DemoTestingProject.cs" />
+    <Compile Include="LoginPageTest\LoginTest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\EmployeeLogin.cs" />
+    <Compile Include="Utilities\SubAdminLogin.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DocuTrackerAutomation\DocuTrackerAutomation.csproj">
+      <Project>{d1dc5f43-afc9-4697-93ff-34d54be93bee}</Project>
+      <Name>DocuTrackerAutomation</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Choose>
+    <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Extension, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITesting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
